@@ -1,0 +1,30 @@
+schemaVersion: "1"
+kind: sandbox
+name: antigravity
+displayName: Antigravity CLI Rust Web
+description: Antigravity CLI sandbox with Rust, cargo, nvm, Node LTS, and Docker-in-sandbox support.
+
+sandbox:
+  image: "docker.io/bluejamkmy/sbx-rust-web:antigravity"
+  aiFilename: AGENTS.md
+  entrypoint:
+    run: ["agy"]
+
+caps:
+  network:
+    allow:
+      - "antigravity.google:443"
+      - "*.googleapis.com:443"
+      - "accounts.google.com:443"
+      - "oauth2.googleapis.com:443"
+
+environment:
+  variables:
+    IS_SANDBOX: "1"
+    CARGO_HOME: /home/agent/.cargo
+    RUSTUP_HOME: /home/agent/.rustup
+    NVM_DIR: /home/agent/.nvm
+
+agentContext: |
+  This sandbox includes Rust stable via rustup, cargo, rustfmt, clippy, nvm, and Node.js LTS.
+  Use cargo and npm scripts from the repository when available.
