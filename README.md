@@ -53,14 +53,14 @@ ANTIGRAVITY_INSTALL_URL=https://antigravity.google/cli/install.sh scripts/build.
 Run the kit after publishing an image that actually includes Antigravity CLI:
 
 ```bash
-sbx run --kit ./kits/antigravity
+sbx run antigravity --kit ./kits/antigravity
+sbx run antigravity --kit "git+https://github.com/blue-jam/sbx-rust-web.git#ref=main&dir=kits/antigravity"
 ```
 
-To publish the kit to an OCI registry:
+Validate:
 
 ```bash
 sbx kit validate ./kits/antigravity
-sbx kit push ./kits/antigravity docker.io/bluejamkmy/sbx-rust-web-antigravity-kit:latest
 ```
 
 ## Included Tools
