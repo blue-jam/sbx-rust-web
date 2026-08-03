@@ -8,9 +8,9 @@ This repository builds three Docker Sandboxes templates:
 
 | Tag | Base variant | Agent |
 | --- | --- | --- |
-| `bluejam/sbx-rust-web:codex` | `docker/sandbox-templates:codex-docker` | Codex |
-| `bluejam/sbx-rust-web:claude-code` | `docker/sandbox-templates:claude-code-docker` | Claude Code |
-| `bluejam/sbx-rust-web:antigravity` | `docker/sandbox-templates:shell-docker` | Antigravity CLI via kit |
+| `bluejamkmy/sbx-rust-web:codex` | `docker/sandbox-templates:codex-docker` | Codex |
+| `bluejamkmy/sbx-rust-web:claude-code` | `docker/sandbox-templates:claude-code-docker` | Claude Code |
+| `bluejamkmy/sbx-rust-web:antigravity` | `docker/sandbox-templates:shell-docker` | Antigravity CLI via kit |
 
 The `-docker` base variants include Docker Engine inside the sandbox VM.
 
@@ -38,8 +38,8 @@ scripts/push.sh
 For Docker Sandboxes, include the full Docker Hub domain in template references:
 
 ```bash
-sbx run --template docker.io/bluejam/sbx-rust-web:codex codex
-sbx run --template docker.io/bluejam/sbx-rust-web:claude-code claude
+sbx run --template docker.io/bluejamkmy/sbx-rust-web:codex codex
+sbx run --template docker.io/bluejamkmy/sbx-rust-web:claude-code claude
 ```
 
 Antigravity CLI is not a built-in Docker Sandboxes agent variant, so this repo
