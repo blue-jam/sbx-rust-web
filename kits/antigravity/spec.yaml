@@ -8,7 +8,7 @@ sandbox:
   image: "docker.io/bluejamkmy/sbx-rust-web:antigravity"
   aiFilename: AGENTS.md
   entrypoint:
-    run: ["agy"]
+    run: ["agy", "--dangerously-skip-permissions"]
 
 caps:
   network:
